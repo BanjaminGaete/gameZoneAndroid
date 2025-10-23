@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 
 import androidx.navigation.compose.rememberNavController
 import com.example.gamezone.viewModel.ProductoViewModel
+import com.example.gamezone.views.InicioScreen
 import com.example.gamezone.views.LoginScreen
 import com.example.gamezone.views.ProductoScreen
 

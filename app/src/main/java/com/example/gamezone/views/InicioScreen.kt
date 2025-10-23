@@ -48,7 +48,7 @@ class InicioScreen(private val navController: NavHostController? = null) {
         var expandirMenu by remember { mutableStateOf(false) }
         var expandirMenuDerecha by remember { mutableStateOf(false) }
 
-        var juego = listOf<Juego>(
+        var juegos = listOf<Juego>(
             Juego("Dante's Inferno","Dante's Inferno (psp 2010)", R.drawable.dante),
 
 
@@ -63,7 +63,7 @@ class InicioScreen(private val navController: NavHostController? = null) {
             topBar = {
                 TopAppBar(
                     modifier = Modifier.windowInsetsPadding(WindowInsets.statusBars),
-                    title = { Text("Autos") },
+                    title = { Text("Juegos") },
                     navigationIcon = {
                         IconButton(onClick = {expandirMenu = true}) {
                             Icon(Icons.Filled.Menu, contentDescription = "Menu")
@@ -100,7 +100,7 @@ class InicioScreen(private val navController: NavHostController? = null) {
             }
         ){innerPadding ->
             Column(modifier = Modifier.padding(innerPadding)) {
-                //Text(text = "Hoooooooolaaa!")
+                //Text(text = "asd")
                 LazyColumn {
                     items(juegos) {a ->
                         Card(
@@ -113,7 +113,7 @@ class InicioScreen(private val navController: NavHostController? = null) {
                             ){
                                 Image(
                                     painter = painterResource(id=a.imagen),
-                                    contentDescription = "Imagen auto",
+                                    contentDescription = "Imagen juego",
                                     modifier = Modifier.height(60.dp)
                                 )
                                 Spacer(modifier = Modifier.width(16.dp))
